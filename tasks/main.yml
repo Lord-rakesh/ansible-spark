@@ -95,9 +95,6 @@
             dest="{{ spark_usr_parent_dir }}/spark-{{ spark_version }}/conf/spark-defaults.conf"
   tags: ["config"]
 
-- include: spark-hive-site.yml
-  tags: ["config","spark-hive-site"]
-
 - include: spark-log4j.yml
   vars:
     log4j_template_file: "{{ spark_log4j_template_file | default('log4j.properties') }}"
